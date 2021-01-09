@@ -38,13 +38,14 @@
                 Logo
             </div>
             <ul class="navbar__list">
-                <li class="navbar-list__item"><a href="#" class="navbar__link">My Stack</a> </li>
-                <li class="navbar-list__item"><a href="#" class="navbar__link">My Works</a> </li>
-                <li class="navbar-list__item"><a href="#" class="navbar__link">Contact Me</a> </li>
+                <li class="navbar-list__item"><a href="#stack" class="navbar__link">My Stack</a> </li>
+                <li class="navbar-list__item"><a href="#work" class="navbar__link">My Works</a> </li>
+                <li class="navbar-list__item"><a href="#services" class="navbar__link">My Services</a> </li>
+                <li class="navbar-list__item"><a href="#contact" class="navbar__link">Contact Me</a> </li>
             </ul>
         </div>
 
-        <div class="myStack">
+        <div class="myStack" id="stack">
             <div class="myStack__title">
                 <h3>My Stack</h3>
             </div>
@@ -70,7 +71,7 @@
             </div>
         </div>
 
-        <div class="myWorks">
+        <div class="myWorks" id="work">
             <div class="myWorks__title">
                 <h3>My Works</h3>
             </div>
@@ -124,7 +125,7 @@
                       </div>
 
                       <!-- Next/previous controls -->
-<!--                       <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <!--<a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
                       <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a> -->
 
                       <!-- Caption text -->
@@ -234,7 +235,26 @@
             </div>
         </div>
 
+        <div class="contact" id="contact">
+          <div class="contact__title">
+              <h3>Contact Me</h3>
+          </div>
+          <div class="contact__form">
+            <form onsubmit="return validate()" action="#contact" name="form">
+              <legend>Your email: </legend>
+              <input type="email" class="contact-form__input" placeholder="Your email" name="email">
+              <legend>Subject: </legend>
+              <input type="text" class="contact-form__input" placeholder="Subject" name="subject">
+              <legend>body: </legend>
+              <textarea type="text" class="contact-form__input" placeholder="body" name="body"></textarea>
+              <input type="submit" value="Contact Me!">
+            </form>
+            <div class="contact-form__errors" id="contact-form__errors"></div>
+          </div>
+      </div>
     </div>
 </body>
-<script src="./script.js"></script>
+<script src="./scripts/modal.js"></script>
+<script src="./scripts/smtp.js"></script>
+<script src="./scripts/email.js"></script>
 </html>
