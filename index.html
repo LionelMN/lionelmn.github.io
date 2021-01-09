@@ -11,7 +11,7 @@
         <div class="header">
             <div class="header__text">
                 <h1>Lionel Montesdeoca Nuez</h1>
-                <h2>Full stack developer</h2>
+                <h2>I am a fullstack developer. This is my portfolio website to showcase my all works related to web development.</h2>
             </div>
             <div class="header__arrow">
                 <span class="arrow">
@@ -38,80 +38,203 @@
                 Logo
             </div>
             <ul class="navbar__list">
-                <li class="navbar-list__item"><a href="#" class="navbar__link">About Me</a> </li>
                 <li class="navbar-list__item"><a href="#" class="navbar__link">My Stack</a> </li>
                 <li class="navbar-list__item"><a href="#" class="navbar__link">My Works</a> </li>
                 <li class="navbar-list__item"><a href="#" class="navbar__link">Contact Me</a> </li>
             </ul>
         </div>
-<!--         <div class="aboutMe">
-            <div class="aboutMe__title">
-                <h3>About Me</h3>
-                <div class="divider"></div>
-            </div>
-            <div class="aboutMe__content">
-                <div class="picture__container">
-                    <img src="./assets/imgs/me.jpg" alt="Profile" class="picture">
-                </div>
-                <div class="aboutMe__text">
-                    <h4 class="text">Hi! I'm Lionel. Nice to meet you</h4>
-                    <p class="text">I am a fullstack developer</p>
 
-                </div>
-            </div>
-        </div> -->
         <div class="myStack">
             <div class="myStack__title">
                 <h3>My Stack</h3>
             </div>
             <div class="myStack__list">
-                <div class="myStack-list__item">HTML5</div>
-                <div class="myStack-list__item">CSS3</div>
-                <div class="myStack-list__item">JavaScript (ES6)</div>
-                <div class="myStack-list__item">Angular 9</div>
-                <div class="myStack-list__item">Node.js</div>
-                <div class="myStack-list__item">Express</div>
-                <div class="myStack-list__item">MongoDB</div>
-                <div class="myStack-list__item">MariaDB</div>
-                <div class="myStack-list__item">PostgreSQL</div>
-                <div class="myStack-list__item">Amazon Web Services</div>
-                <div class="myStack-list__item">Firebase</div>
-                <div class="myStack-list__item">Scrum</div>
-                <div class="myStack-list__item">TypeScript</div>
-                <div class="myStack-list__item">Bash</div>
-                <div class="myStack-list__item">Git</div>
-                <div class="myStack-list__item">Docker</div>
+                <div class="myStack-list__item" item="HTML5">HTML5</div>
+                <div class="myStack-list__item" item="CSS3">CSS3</div>
+                <div class="myStack-list__item" item="JavaScript (ES6)">JavaScript (ES6)</div>
+                <div class="myStack-list__item" item="Angular 9">Angular 9</div>
+                <div class="myStack-list__item" item="Node.js">Node.js</div>
+                <div class="myStack-list__item" item="Express">Express</div>
+                <div class="myStack-list__item" item="MongoDB">MongoDB</div>
+                <div class="myStack-list__item" item="MariaDB">MariaDB</div>
+                <div class="myStack-list__item" item="PostgreSQL">PostgreSQL</div>
+                <div class="myStack-list__item" item="Amazon Web Services">Amazon Web Services</div>
+                <div class="myStack-list__item" item="Firebase">Firebase</div>
+                <div class="myStack-list__item" item="Scrum">Scrum</div>
+                <div class="myStack-list__item" item="TypeScript">TypeScript</div>
+                <div class="myStack-list__item" item="Bash">Bash</div>
+                <div class="myStack-list__item" item="Git">Git</div>
+                <div class="myStack-list__item" item="Docker">Docker</div>
+                <div class="myStack-list__item" item="PHP">PHP</div>
+                <div class="myStack-list__item" item="Laravel">Laravel</div>
             </div>
         </div>
+
         <div class="myWorks">
             <div class="myWorks__title">
                 <h3>My Works</h3>
             </div>
             <div class="myWorks__list">
+
                 <div class="myWorks__card">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
                     <div class="card__content">
                         <h2>01</h2>
                         <div class="card__title">
                             <h4>MEAN To do list</h4>
                         </div>
                         <div class="card__description">
-                            <p>Responsive multiuser to do list built with MongoDB, Express, Angular and Node. Designe and develope by me</p>
+                            <p>Responsive multiuser to do list built with MongoDB, Express, Angular and Node. Designed and developed by me</p>
                         </div>
                         <div class="card__links">
                             <a href="https://github.com/LionelMN/todolist-angular">Front Repository</a>
                             <a href="https://github.com/LionelMN/todolist-back">Back Repository</a>
                         </div>
-                        <div class="card__container-img">
-                            <img src="./assets/imgs/todolist.PNG" alt="work1" class="card__img">
+                        <div class="card__container-img" action="Click to see more">
+                            <img src="./assets/imgs/todolist.PNG" alt="work1" class="card__img" onclick="openModal(1);currentSlide(1)">
                         </div>
                     </div>
                 </div>
+
+                <div id="myModal1" class="modal">
+                    <span class="close cursor" onclick="closeModal(1)">&times;</span>
+                    <div class="modal-content">
+
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="./assets/imgs/register.PNG" style="width:50%;">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="./assets/imgs/login.PNG" style="width:50%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="./assets/imgs/todolist.PNG" style="width:100%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="./assets/imgs/todolistmobile.jpg" style="width:15%">
+                      </div>
+
+                      <!-- Next/previous controls -->
+<!--                       <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+                      <!-- Caption text -->
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+
+                      <!-- Thumbnail image controls -->
+                      <div class="thumbnail-image-controls">
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/register.PNG" onclick="currentSlide(1)" alt="Register web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/login.PNG" onclick="currentSlide(2)" alt="Login web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/todolist.PNG" onclick="currentSlide(3)" alt="To-do list web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/todolistmobile.jpg" onclick="currentSlide(4)" alt="To-do list mobile view" style="width:50%">
+                          </div>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="myWorks__card">
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
+                    <span class="border-effect"></span>
+                    <div class="card__content">
+                        <h2>02</h2>
+                        <div class="card__title">
+                            <h4>Dev&Des APP Back Development</h4>
+                        </div>
+                        <div class="card__description">
+                            <p>An aplication created to connect people of differents roles focused on the development of games, webs, aplications. App created with a team</p>
+                        </div>
+                        <div class="card__links">
+                            <a href="https://github.com/amaryan/De-DeFront">Front Repository</a>
+                            <a href="https://github.com/amaryan/De-DeBack">Back Repository</a>
+                        </div>
+                        <div class="card__container-img" action="Click to see more">
+                            <img src="./assets/imgs/todolist.PNG" alt="work1" class="card__img" onclick="openModal(2);currentSlide(5)">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="myModal2" class="modal">
+                    <span class="close cursor" onclick="closeModal(2)">&times;</span>
+                    <div class="modal-content">
+
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="./assets/imgs/register.PNG" style="width:50%;">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="./assets/imgs/login.PNG" style="width:50%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="./assets/imgs/todolist.PNG" style="width:100%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="./assets/imgs/todolistmobile.jpg" style="width:25%">
+                      </div>
+
+                      <!-- Next/previous controls -->
+                      <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" id="class" onclick="plusSlides(1)">&#10095;</a>
+
+                      <!-- Caption text -->
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+
+                      <!-- Thumbnail image controls -->
+                      <div class="thumbnail-image-controls">
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/register.PNG" onclick="currentSlide(5)" alt="Register web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/login.PNG" onclick="currentSlide(6)" alt="Login web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/todolist.PNG" onclick="currentSlide(7)" alt="To-do list web view" style="width:50%">
+                          </div>
+
+                          <div class="column">
+                            <img class="demo" src="./assets/imgs/todolistmobile.jpg" onclick="currentSlide(8)" alt="To-do list mobile view" style="width:50%">
+                          </div>
+                      </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
