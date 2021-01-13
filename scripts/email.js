@@ -7,7 +7,7 @@
       }
       if (!document.form.subject.value) {
           errors = true;
-          msgError += "Please, tell me what you want."
+          msgError += " Please, tell me what you want."
       }
       if (!document.form.body.value) {
           errors = true;

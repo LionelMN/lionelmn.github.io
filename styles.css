@@ -1,3 +1,10 @@
+:root {
+    --primary-textColor: #e7e7de;
+    --primary-bgColor: #020b13;
+    --secondary-bgColor: #008891;
+    --terciary-bgColor: #00587a;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,8 +12,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: #e7e7de;
-    background: #020b13;
+    color: var(--primary-textColor);
+    background: var(--primary-bgColor);
     font-family: 'Roboto'
 }
 
@@ -56,7 +63,7 @@ body {
     display: grid;
     grid-template-columns: 70% 30%;
     align-items: center;
-    background: #008891
+    background: var(--secondary-bgColor);
 }
 
 ul {
@@ -81,13 +88,13 @@ ul {
 }
 
 .navbar-list__item:hover {
-    background: #00587a;
+    background: var(--terciary-bgColor);
     transform: translateY(2px) scale(1.1);
 }
 
 .navbar__link{
     text-decoration: none;
-    color: #e7e7de;
+    color: var(--primary-textColor);
 }
 
 /*************************************ABOUT ME*************************************************/
@@ -103,7 +110,7 @@ ul {
 }
 
 h3{
-    border-bottom: 1px solid #e7e7de;
+    border-bottom: 1px solid var(--primary-textColor);
     width: 95vw;
     text-align: center;
     margin: 0;
@@ -191,7 +198,7 @@ h3{
     position: relative;
     width: 300px;
     height: 400px;
-    background: #00587a;
+    background: var(--terciary-bgColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +234,7 @@ h3{
     top: 0;
     font-size: 4em;
     font-weight: 800;
-    color: #e7e7de;
+    color: var(--primary-textColor);
     z-index: 1;
     opacity: 0.1;
     transition: 0.5s;
@@ -266,13 +273,13 @@ h3{
 .myWorks__card:hover h2 {
     opacity: 1;
     transform: translateY(-50px);
-    color: #008891;
+    color: var(--secondary-bgColor);
 }
 
 .card__content h4 {
     position: relative;
     font-size: 1.5em;
-    color: #e7e7de;
+    color: var(--primary-textColor);
     z-index: 2;
     letter-spacing: 1px;
     opacity: 0.5;
@@ -287,7 +294,7 @@ h3{
 .card__content p {
     position: relative;
     font-size: 1em;
-    color: #e7e7de;
+    color: var(--primary-textColor);
     z-index: 2;
     letter-spacing: 1px;
     opacity: 0.5;
@@ -301,7 +308,7 @@ h3{
     margin: auto;
     margin-top: 15px;
     padding: 8px 15px;
-    background: #e7e7de;
+    background: var(--primary-textColor);
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
@@ -324,7 +331,7 @@ h3{
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, transparent, #e7e7de);
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
     animation: animate1 2s linear infinite;
 }
 
@@ -343,7 +350,7 @@ h3{
     right: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, transparent, #e7e7de);
+    background: linear-gradient(to bottom, transparent, var(--primary-textColor));
     animation: animate2 2s linear infinite;
     animation-delay: 1s;
 }
@@ -363,7 +370,7 @@ h3{
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to left, transparent, #e7e7de);
+    background: linear-gradient(to left, transparent, var(--primary-textColor));
     animation: animate3 2s linear infinite;
     animation-delay: 2s;
 }
@@ -383,7 +390,7 @@ h3{
     left: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to top, transparent, #e7e7de);
+    background: linear-gradient(to top, transparent, var(--primary-textColor));
     animation: animate4 2s linear infinite;
     animation-delay: 3s;
 }
@@ -395,11 +402,6 @@ h3{
     100%{
         transform: translateY(-100%);
     }
-}
-
-.team__trigger {
-    cursor: pointer;
-    color: #008891;
 }
 
 /************************************LIGHTBOX*********************************************************/
@@ -437,7 +439,7 @@ h3{
 
     /* The Close Button */
     .close {
-        color: white;
+        color: var(--primary-textColor);
         position: absolute;
         top: 10px;
         right: 25px;
@@ -467,7 +469,7 @@ h3{
         width: auto;
         padding: 16px;
         margin-top: -50px;
-        color: white;
+        color: var(--primary-textColor);
         font-weight: bold;
         font-size: 20px;
         transition: 0.6s ease;
@@ -490,7 +492,7 @@ h3{
 
     /* Number text (1/3 etc) */
     .numbertext {
-        color: #f2f2f2;
+        color: var(--primary-textColor);
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
@@ -500,9 +502,9 @@ h3{
     /* Caption text */
     .caption-container {
         text-align: center;
-        background-color: #008891;
+        background-color: var(--secondary-bgColor);
         padding: 2px 16px;
-        color: white;
+        color: var(--primary-textColor);
     }
 
     img.demo {
@@ -528,42 +530,291 @@ h3{
     }
 /*********************************************************************************************/
 
+/**************************CONTACT ME***********************************************/
+.contact{
+    margin: 10px 0 10px 0;
+    display: grid;
+    grid-template-rows: 1.5rem;
+    row-gap: 1rem;
+}
+
+.contact__title {
+    justify-self: center;
+}
+
+
+/*****************FORM*************************/
+.contact__form {
+    position: relative;
+    justify-self: center;
+    text-align: center;
+    width: 80%;
+    background: var(--terciary-bgColor);
+}
+
+.contact__form::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(231, 231, 222, 0.1);
+    z-index: 0;
+}
+
+.contact__form form{
+    display: grid;
+    justify-content: center;
+    row-gap: 1rem;
+    width: 100%;
+    grid-template-columns: 80%;
+}
+
+.contact-form__input {
+    outline: none;
+    z-index: 1;
+}
+
+.contact__form form textarea {
+    width: 99%;
+    min-width: 99%;
+    max-width: 99%;
+    height: 3rem;
+    min-height: 1.5rem;
+    max-height: 4rem;
+}
+
+.contact-form__button{
+    margin-bottom: 1rem;
+    width: 25%;
+    justify-self: center;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form__errors{
+    margin-bottom: 1rem;
+}
+
+/**********************************************/
+
+/*************SOCIAL MEDIA ACCORDION***********/
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('/assets/genericons/genericons-regular-webfont.woff')format('woff'),
+        url('/assets/genericons/genericons-regular-webfont.eot')format('truetype')
+}
+
+.otherContacts {
+    margin: 0px auto;
+    width: 90%;
+}
+
+.otherContacts h4 {
+    color: var(--primary-textColor);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.accordion {
+    background: #333;
+    width: 100%;
+    min-width: 800px;
+    display: block;
+    overflow: hidden;
+    height: 200px;
+    font-size: 0;
+}
+
+.tab {
+    display: inline-block;
+    background: #444;
+    border-right: #333 solid 1px;
+    width: 80px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition: all 0.5s ease-in-out 0.1s;
+}
+
+.tab:hover {
+    width: 450px;
+}
+
+.tab:hover .social a:before {
+    margin-left: -100px;
+}
+
+.tab:hover .social a:after {
+    margin-left: -5px;
+}
+
+.tab .content {
+    color: black;
+    background: var(--primary-textColor);
+    width: 360px;
+    height: 200px;
+    margin-left: 80px;
+    position: relative;
+    padding: 50px 0 0 15px ;
+}
+
+.tab .content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tab .content p {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-right: 30px;
+}
+
+.social a:before,
+.social a:after {
+    transition: all 0.4s ease-in-out 0.1s;
+    width: 80px;
+    height: 200px;
+    position: absolute;
+    text-indent: 0;
+    padding-top: 90px;
+    padding-left: 25px;
+    display: block;
+    font: normal 30px Genericons;
+    color: var(--primary-textColor);
+}
+
+.social a:after {
+    font-size: 48px;
+    padding-left: 20px;
+    padding-top: 80px;
+    margin-left: 85px;
+}
+
+/* Icons */
+.linkedin a:before,
+.linkedin a:after {
+    content:  '\f208'
+}
+
+.linkedin a:after {
+    background: #00a9cd;
+}
+
+.github a:before,
+.github a:after {
+    content:  '\f200'
+}
+
+.github a:after {
+    background: #6e5494;
+}
+
+.twitter a:before,
+.twitter a:after {
+    content:  '\f202'
+}
+
+.twitter a:after {
+    background: #6dc5dd;
+}
+
+/**********************************************/
+
+/***************FOOTER*************/
+.footer{
+    background: #000;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
 /*RESPONSIVE*/
+
+@media only screen and (max-width: 950px){
+    .otherContacts {
+        width: 70%;
+    }
+
+    .tab {
+        display: block;
+        width: 100%;
+        border-bottom: 3px #333 solid;
+    }
+
+    .tab .content {
+        width: 85%;
+    }
+
+    .tab:hover {
+        width: 100%;
+    }
+
+    .accordion {
+        display: block;
+        min-width: 450px;
+        height: auto;
+    }
+}
 
 @media only screen and (max-width: 600px){
 
-/* .header {
-    display: none;
-} */
+    /* .header {
+        display: none;
+    } */
 
-/*************************************NAVBAR*************************************************/
-.logo {
-    display: none;
-}
+    /*************************************NAVBAR*************************************************/
+    .logo {
+        display: none;
+    }
 
-.navbar{
-    width: 100%;
-    height: 5rem;
-    grid-template-columns: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-}
-
-/*************************************ABOUT ME*************************************************/
-    .aboutMe__content {
-        grid-template-rows: 60% 40%;
+    .navbar{
+        width: 100%;
+        height: 5rem;
         grid-template-columns: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 3;
     }
 
-    .picture{
-        height: 100%;
+    .otherContacts {
+        width: 100%;
     }
 
-    .aboutMe__text{
-        margin-top: 10px;
-        text-align: center;
+    .tab {
+        display: block;
+        width: 100%;
+        border-bottom: 3px #333 solid;
     }
+
+    .tab .content {
+        width: 85%;
+    }
+
+    .tab:hover {
+        width: 100%;
+    }
+
+    .accordion {
+        width: 50%;
+        min-width: 350px;
+        margin: auto;
+    }
+
 }
 
 
