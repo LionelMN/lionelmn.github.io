@@ -566,14 +566,18 @@ h3{
 .contact__form form{
     display: grid;
     justify-content: center;
+    margin: 0 auto;
     row-gap: 1rem;
-    width: 100%;
+    width: 80%;
     grid-template-columns: 80%;
 }
 
 .contact-form__input {
+    padding: 0.5rem;
     outline: none;
     z-index: 1;
+    border-radius: 5px;
+    border: none;
 }
 
 .contact__form form textarea {
@@ -594,6 +598,8 @@ h3{
     border: none;
     border-radius: 5px;
     outline: none;
+    height: 1.5rem;
+    padding: 0 auto;
 }
 
 .contact-form__errors{
@@ -791,6 +797,21 @@ ul {
         z-index: 3;
     }
 
+    /*************************************CONTACT*************************************************/
+
+    /*************************************FORM****************************************************/
+    .contact__form form textarea{
+        width: 92%;
+        min-width: 92%;
+        max-width: 92%;
+    }
+
+    .contact-form__button{
+        width: auto;
+    }
+
+
+    /*************************************ACCORDION***********************************************/
     .otherContacts {
         width: 100%;
     }
