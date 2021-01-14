@@ -34,6 +34,13 @@ h3{
     font-family: 'Archivo Black', sans-serif;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -20px;
+    visibility: hidden;
+}
+
 
 /*************************************HEADER*************************************************/
 
@@ -280,7 +287,7 @@ h3{
 
 .myWorks__card{
     position: relative;
-    width: 300px;
+    width: 80%;
     height: 500px;
     background: var(--terciary-bgColor);
     display: flex;
@@ -926,9 +933,26 @@ ul {
 
 @media only screen and (max-width: 600px){
 
-    /* .header {
-        display: none;
-    } */
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -60px;
+        visibility: hidden;
+    }
+
+    .header {
+        background-size: cover;
+        background-position: center;
+        grid-template-rows: 98% 2%;
+    }
+
+    .header__text{
+        margin: 0 1rem;
+    }
+
+    .header__arrow{
+        align-self: end;
+    }
 
     /*************************************NAVBAR*************************************************/
     .logo {
@@ -945,6 +969,10 @@ ul {
     }
 
     /*************************************STACK***************************************************/
+    .myStack-list__item::before {
+        font-size: 60%;
+    }
+
     .stackIcon {
         align-self: center;
     }
@@ -956,10 +984,6 @@ ul {
         width: 92%;
         min-width: 92%;
         max-width: 92%;
-    }
-
-    .contact-form__button{
-        width: auto;
     }
 
 
