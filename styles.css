@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --primary-textColor: #e7e7de;
     --primary-bgColor: #020b13;
     --secondary-bgColor: #008891;
     --terciary-bgColor: #00587a;
+    --before-cardColor:  rgba(231, 231, 222, 0.1);
 }
 
 html {
@@ -17,8 +21,11 @@ body {
     font-family: 'Roboto'
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Archivo Black'
+}
+
 
 /*************************************HEADER*************************************************/
 
@@ -155,24 +162,111 @@ h3{
     grid-template-rows: repeat(3, 25%);
     grid-template-columns: repeat(5, 20%);
     justify-items: center;
+    position: relative;
+    background: var(--terciary-bgColor);
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.myStack__list::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: var(--before-cardColor);
+    z-index: 0;
 }
 
 .myStack-list__item {
     text-align: center;
+    margin: .5rem auto;
+    width: 90%;
+    transition: 1s;
+    z-index: 1;
+}
+
+.stackIcon {
+    width: 50px;
+    height: 50px;
 }
 
 .myStack-list__item::before{
     content: attr(item);
-    transform: scale(0);
+    /* transform: scale(0); */
+    opacity: 0;
     display: block;
     position: relative;
     bottom: 5%;
-    transition: 1s;
+    transition: 0.47s;
+}
+
+.myStack-list__item:hover {
+    background: var(--primary-textColor);
+    border-radius: 5px;
 }
 
 .myStack-list__item:hover::before {
-    transform: scale(1);
-    background: rgba(231, 231, 222, 0.5);
+    /* transform: scale(1); */
+    opacity: 1;
+    background: var(--secondary-bgColor);
+    color: var(--primary-bgColor);
+}
+
+.myStack .border-effect {
+    transition: 0.5;
+    opacity: 0;
+}
+
+.myStack:hover .border-effect {
+    opacity: 1;
+    background: red;
+    height: 100%;
+}
+
+.myStack .border-effect:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate1 2s linear infinite;
+}
+
+.myStack .border-effect:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+.myStack .border-effect:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate3 2s linear infinite;
+    animation-delay: 2s;
+}
+
+.myStack .border-effect:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate4 2s linear infinite;
+    animation-delay: 3s;
 }
 
 /*************************************MY WORKS*************************************************/
@@ -205,7 +299,6 @@ h3{
     margin: 30px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    opacity: 0.2;
 }
 
 .myWorks__list .myWorks__card:hover{
@@ -219,7 +312,7 @@ h3{
     left: 2px;
     bottom: 2px;
     width: 50%;
-    background: rgba(231, 231, 222, 0.1);
+    background: var(--before-cardColor);
     z-index: 0;
 }
 
@@ -550,6 +643,7 @@ h3{
     text-align: center;
     width: 80%;
     background: var(--terciary-bgColor);
+    overflow: hidden;
 }
 
 .contact__form::before {
@@ -559,7 +653,7 @@ h3{
     left: 2px;
     bottom: 2px;
     width: 50%;
-    background: rgba(231, 231, 222, 0.1);
+    background: var(--before-cardColor);
     z-index: 0;
 }
 
@@ -604,6 +698,60 @@ h3{
 
 .contact-form__errors{
     margin-bottom: 1rem;
+}
+
+.contact__form .border-effect {
+    transition: 0.5;
+    opacity: 0;
+}
+
+.contact__form:hover .border-effect {
+    opacity: 1;
+    background: red;
+    height: 100%;
+}
+
+.contact__form .border-effect:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate1 2s linear infinite;
+}
+
+.contact__form .border-effect:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+.contact__form .border-effect:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate3 2s linear infinite;
+    animation-delay: 2s;
+}
+
+.contact__form .border-effect:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-textColor));
+    animation: animate4 2s linear infinite;
+    animation-delay: 3s;
 }
 
 /**********************************************/
@@ -795,6 +943,11 @@ ul {
         position: fixed;
         top: 0;
         z-index: 3;
+    }
+
+    /*************************************STACK***************************************************/
+    .stackIcon {
+        align-self: center;
     }
 
     /*************************************CONTACT*************************************************/
