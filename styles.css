@@ -281,7 +281,7 @@ h3{
 .myWorks__card{
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 500px;
     background: var(--terciary-bgColor);
     display: flex;
     justify-content: center;
@@ -310,6 +310,9 @@ h3{
     padding: 30px;
     text-align: center;
     z-index: 1;
+    display: grid;
+    grid-template-rows: 4rem 10rem 9rem 8rem;
+    align-items: center;
 }
 
 .card__content h2 {
@@ -321,6 +324,14 @@ h3{
     color: var(--primary-textColor);
     opacity: 0.1;
     transition: 0.5s;
+}
+
+.card__title {
+    align-self: end;
+}
+
+.card__title h4{
+    margin: 0;
 }
 
 .card__content img {
@@ -344,7 +355,7 @@ h3{
     transform: scale(0);
     display: block;
     position: relative;
-    bottom: 5%;
+    bottom: 0%;
     transition: 1s;
 }
 
