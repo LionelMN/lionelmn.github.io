@@ -217,10 +217,8 @@ a.anchor {
     opacity: 0;
 }
 
-.myStack:hover .border-effect {
+.myStack__list:hover .border-effect {
     opacity: 1;
-    background: red;
-    height: 100%;
 }
 
 .myStack .border-effect:nth-child(1) {
@@ -287,7 +285,7 @@ a.anchor {
 
 .myWorks__card{
     position: relative;
-    width: 80%;
+    width: 300px;
     height: 500px;
     background: var(--terciary-bgColor);
     display: flex;
@@ -557,6 +555,8 @@ a.anchor {
     .mySlides {
         text-align: center;
         display: none;
+        background: var(--primary-bgColor);
+        border: 1px solid var(--primary-textColor);
     }
 
     /* Next & previous buttons */
@@ -606,8 +606,13 @@ a.anchor {
         color: var(--primary-textColor);
     }
 
+    .modal__img{
+        width:100%
+    }
+
     img.demo {
         opacity: 0.6;
+        width: 50%;
     }
 
     .active,
@@ -777,7 +782,7 @@ ul {
 
 .otherContacts {
     margin: 0px auto;
-    width: 90%;
+    width: 100%;
 }
 
 .otherContacts h4 {
@@ -788,7 +793,8 @@ ul {
 
 .accordion {
     background: #333;
-    width: 100%;
+    margin: auto;
+    width: 80%;
     min-width: 800px;
     display: block;
     overflow: hidden;
@@ -906,8 +912,15 @@ ul {
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 950px){
+
+    .header {
+        background-size: cover;
+        background-position: center;
+        grid-template-rows: 98% 2%;
+    }
+
     .otherContacts {
-        width: 70%;
+        width: 80%;
     }
 
     .tab {
@@ -915,6 +928,17 @@ ul {
         width: 100%;
         border-bottom: 3px #333 solid;
     }
+
+    /*WORK*/
+    .myWorks__card{
+        width: 80%;
+        height: 550px;
+    }
+
+    .card__content {
+        grid-template-rows: 4rem 8rem 9rem 8rem;
+    }
+    /**/
 
     .tab .content {
         width: 85%;
@@ -940,11 +964,7 @@ ul {
         visibility: hidden;
     }
 
-    .header {
-        background-size: cover;
-        background-position: center;
-        grid-template-rows: 98% 2%;
-    }
+
 
     .header__text{
         margin: 0 1rem;
@@ -977,6 +997,7 @@ ul {
         align-self: center;
     }
 
+
     /*************************************CONTACT*************************************************/
 
     /*************************************FORM****************************************************/
@@ -1007,7 +1028,7 @@ ul {
     }
 
     .accordion {
-        width: 50%;
+        width: 80%;
         min-width: 350px;
         margin: auto;
     }
