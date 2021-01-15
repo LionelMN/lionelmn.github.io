@@ -112,49 +112,45 @@
 
                       <div class="mySlides">
                         <div class="numbertext">1 / 4</div>
-                        <img src="./assets/imgs/register.PNG" style="width:50%;">
+                        <img src="./assets/imgs/register.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">2 / 4</div>
-                        <img src="./assets/imgs/login.PNG" style="width:50%">
+                        <img src="./assets/imgs/login.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">3 / 4</div>
-                        <img src="./assets/imgs/todolist.PNG" style="width:100%">
+                        <img src="./assets/imgs/todolist.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">4 / 4</div>
-                        <img src="./assets/imgs/todolistmobile.jpg" style="width:15%">
+                        <img src="./assets/imgs/todolistmobile.jpg" class="modal__img" style="width:25%">
                       </div>
-
-                      <!-- Next/previous controls -->
-                      <!--<a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a> -->
 
                       <!-- Caption text -->
-                      <div class="caption-container">
+                      <!-- <div class="caption-container">
                         <p id="caption"></p>
-                      </div>
+                      </div> -->
 
                       <!-- Thumbnail image controls -->
                       <div class="thumbnail-image-controls">
                           <div class="column">
-                            <img class="demo" src="./assets/imgs/register.PNG" onclick="currentSlide(1)" alt="Register web view" style="width:50%">
+                            <img class="demo" src="./assets/imgs/register.PNG" onclick="currentSlide(1)" alt="Register web view">
                           </div>
 
                           <div class="column">
-                            <img class="demo" src="./assets/imgs/login.PNG" onclick="currentSlide(2)" alt="Login web view" style="width:50%">
+                            <img class="demo" src="./assets/imgs/login.PNG" onclick="currentSlide(2)" alt="Login web view">
                           </div>
 
                           <div class="column">
-                            <img class="demo" src="./assets/imgs/todolist.PNG" onclick="currentSlide(3)" alt="To-do list web view" style="width:50%">
+                            <img class="demo" src="./assets/imgs/todolist.PNG" onclick="currentSlide(3)" alt="To-do list web view">
                           </div>
 
                           <div class="column">
-                            <img class="demo" src="./assets/imgs/todolistmobile.jpg" onclick="currentSlide(4)" alt="To-do list mobile view" style="width:50%">
+                            <img class="demo" src="./assets/imgs/todolistmobile.jpg" onclick="currentSlide(4)" alt="To-do list mobile view" style="width:20%">
                           </div>
                       </div>
 
@@ -171,7 +167,7 @@
                             <h4>Dev&Des Web</h4>
                         </div>
                         <div class="card__description">
-                            <p>An aplication created to connect people of differents roles focused on the development of games, webs, aplications. App created with a team</p>
+                            <p>An aplication created to connect people of differents roles focused on the development of games, webs, aplications. In this project I was on charge of the backend</p>
                         </div>
                         <div class="card__links">
                             <a href="https://github.com/amaryan/De-DeFront" target="_blank">Front Repository</a>
@@ -189,32 +185,28 @@
 
                       <div class="mySlides">
                         <div class="numbertext">1 / 4</div>
-                        <img src="./assets/imgs/register.PNG" style="width:50%;">
+                        <img src="./assets/imgs/register.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">2 / 4</div>
-                        <img src="./assets/imgs/login.PNG" style="width:50%">
+                        <img src="./assets/imgs/login.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">3 / 4</div>
-                        <img src="./assets/imgs/todolist.PNG" style="width:100%">
+                        <img src="./assets/imgs/todolist.PNG" class="modal__img">
                       </div>
 
                       <div class="mySlides">
                         <div class="numbertext">4 / 4</div>
-                        <img src="./assets/imgs/todolistmobile.jpg" style="width:25%">
+                        <img src="./assets/imgs/todolistmobile.jpg" class="modal__img" style="width:25%">
                       </div>
-
-                      <!-- Next/previous controls -->
-                      <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="next" id="class" onclick="plusSlides(1)">&#10095;</a>
 
                       <!-- Caption text -->
-                      <div class="caption-container">
+                      <!-- <div class="caption-container">
                         <p id="caption"></p>
-                      </div>
+                      </div> -->
 
                       <!-- Thumbnail image controls -->
                       <div class="thumbnail-image-controls">
@@ -253,14 +245,14 @@
             <span class="border-effect"></span>
             <h4>Send me an email</h4>
             <p>It's important to put an email address and a subject.</p>
-            <form onsubmit="return validate()" action="#contact" name="form">
+            <form name="form">
               <legend>Your email: </legend>
               <input type="email" class="contact-form__input" placeholder="Your email" name="email">
               <legend>Subject: </legend>
               <input type="text" class="contact-form__input" placeholder="Subject" name="subject">
               <legend>body: </legend>
               <textarea type="text" class="contact-form__input" placeholder="body" name="body"></textarea>
-              <input type="submit" value="Contact!" class="contact-form__button">
+              <input type="button" value="Contact!" class="contact-form__button" onclick="return validate()">
             </form>
             <div class="contact-form__errors" id="contact-form__errors"></div>
           </div>
@@ -292,7 +284,7 @@
                   </div>
                   <div class="content">
                     <h1>Twitter</h1>
-                    <p>Connect with me on a personal level on Linkedin</p>
+                    <p>Connect with me on a personal level on Twitter</p>
                   </div>
                 </li>
               </ul>
