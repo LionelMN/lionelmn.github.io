@@ -1155,10 +1155,31 @@ ul {
     /*************************************CONTACT*************************************************/
 
     /*************************************FORM****************************************************/
+    .contact__form {
+        padding: 0 1rem;
+        width: 70%;
+    }
+
+    .legend {
+        justify-self: start;
+    }
+
     .contact__form form textarea{
         width: 92%;
         min-width: 92%;
         max-width: 92%;
+    }
+
+    .contact__form form {
+        row-gap: 0;
+    }
+
+    .contact-form__input {
+        margin-bottom: 1rem;
+    }
+
+    .contact-form__button {
+        width: auto;
     }
 
 
