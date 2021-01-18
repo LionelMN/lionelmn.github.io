@@ -650,6 +650,7 @@ a.anchor {
     width: 100%;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -657,6 +658,7 @@ a.anchor {
     position: relative;
     width: 300px;
     height: 200px;
+    margin: 10px 0;
 }
 
 .face {
@@ -1084,6 +1086,12 @@ ul {
     .card__content {
         grid-template-rows: 4rem 8rem 9rem 8rem;
     }
+    /**/
+
+
+    /*services*/
+
+
     /**/
 
     .tab .content {
