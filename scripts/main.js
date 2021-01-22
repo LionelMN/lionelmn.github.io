@@ -21,6 +21,7 @@ function validate(){
     }
     if (!document.form.body.value) {
         errors = true;
+        msgError += ""
     }
     if(!errors){
         send()
@@ -32,11 +33,13 @@ function validate(){
 function send(){
   Email.send({
       SecureToken : 'c2f3abdb-4248-4f4f-aa3e-c02389ede1c8',
-      To: `lionelmontesnuez@gmail.com, ${document.form.email.value}`,
-      From: 'lionelmontesnuez@gmail.com',
+      To: `lionelmontesnuez@gmail.com`,
+      From: `${document.form.email.value}`,
       Subject: `${document.form.subject.value}`,
       Body: `${document.form.body.value}`
-    }).then();
+    }).then(
+      document.getElementById("contact-form__errors").innerHTML="Email sent succesfuly"
+    );
 }
 /*********************************************************************************************************/
 
@@ -79,6 +82,5 @@ function openModal(modal) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
   }
 /*********************************************************************************************************/
