@@ -1,2 +1,2 @@
 # Portfolio Web
-The code of my portfolio, a simple page with html, css and JavaScript vanilla
+The Angular build of my portfolio
